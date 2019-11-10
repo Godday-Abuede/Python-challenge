@@ -1,7 +1,15 @@
-import os
-import csv 
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov  9 00:15:12 2019
 
-PyPoll_csv = os.path.join("Electiondata.csv")
+@author: Godday Abuede
+"""
+
+# Import the required library/ module and data
+# Make sure the data is saved in the same directory/ folder as the script file
+import pandas as pd 
+dt = pd.read_csv('election_data.csv') 
+dt.head()
 
 # Group votes by candidates
 cd = dt.groupby('Candidate')
@@ -71,7 +79,6 @@ print('-'*25, file=f)
 print(f"Winner: {df[df['Vote']==df['Vote'].max()]['Candidate'][1]}", file=f)
 print('-'*25, file=f)
 f.close()
-
 
 
 
