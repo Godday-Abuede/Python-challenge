@@ -1,15 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  9 00:15:12 2019
+import os
+import csv 
 
-@author: Godday Abuede
-"""
-
-# Import the required library/ module and data
-# Make sure the data is saved in the same directory/ folder as the script file
-import pandas as pd 
-dt = pd.read_csv('election.csv') 
-dt.head()
+PyPoll_csv = os.path.join("Electiondata.csv")
 
 # Group votes by candidates
 cd = dt.groupby('Candidate')
